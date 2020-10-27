@@ -1,9 +1,7 @@
 FROM ubuntu:18.04
 SHELL ["/bin/bash","-c"]
 RUN apt-get -o Acquire::Check-Valid-Until=false -o Acquire::Check-Date=false -y update
-#RUN apt-get -y update
 RUN apt-get -o Acquire::Check-Valid-Until=false -o Acquire::Check-Date=false -y upgrade
-#RUN apt-get -y upgrade
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y install \
         gcc \
         g++ \
